@@ -29,7 +29,7 @@ The website serves as a portfolio and contact platform for the company, showcasi
 
 Simply open `index.html` in any modern web browser to view the website locally.
 
-The live version is hosted on GitHub Pages at: [Add link if available]
+The live version is hosted on GitHub Pages at: https://usermayalive.github.io/intern_thinkonomers/
 
 ## Contact
 
