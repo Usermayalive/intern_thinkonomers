@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rolling Plate Creatives | Next-Level Storytelling</title>
+    <meta name="description" content="Creative agency specializing in photography, videography, and branding solutions that tell compelling visual stories.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/ScrollToPlugin.min.js"></script>
+    
+</head>
+<body>
+    <!-- LOADING OVERLAY -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- 3D PLATE SHOWCASE -->
+    <div class="plate-showcase" id="plateShowcase"></div>
+
+    <!-- FLOATING ACCENT GRAPHICS -->
+    <div class="floating-accent" style="width: 400px; height: 400px; background: var(--primary); top: 20%; left: 10%; animation: float 8s ease-in-out infinite;"></div>
+    <div class="floating-accent" style="width: 500px; height: 500px; background: var(--accent-blue); top: 60%; left: 70%; animation: float 10s ease-in-out infinite reverse;"></div>
+    <div class="floating-accent" style="width: 600px; height: 600px; background: var(--accent-yellow); top: 30%; left: 60%; animation: float 12s ease-in-out infinite 2s;"></div>
+
+    <!-- MAIN HEADER WITH LOGO -->
+    <header class="main-header">
+        <img src="https://therollingplatecreatives.com/wp-content/uploads/2022/08/cropped-TRP-LOGO-1.png" alt="The Rolling Plate Creatives Logo">
+        <h1>The Rolling Plate Creatives</h1>
+    </header>
+
+    <!-- CINEMATIC NAVIGATION -->
+    <nav class="cinematic-nav">
+    <a href="index.html" class="nav-item">Home</a>
+    <a href="/work.html" class="nav-item">Work</a>
+     
+    <a href="/about.html" class="nav-item">About</a>
+    <a href="/contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <h2>We Craft Stories <span class="rolling-text">That Roll</span></h2>
+        <p>A full-service creative agency transforming ideas into unforgettable visual experiences through photography, videography, and innovative branding solutions.</p>
+        <button class="cta-button">See Our Work in Motion</button>
+    </section>
+
+    <!-- PORTFOLIO SHOWCASE -->
+    <section class="portfolio" id="work">
+        <h2 class="section-title">Our Rolling Projects</h2>
+         
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1579033462043-0f11a7862f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury Watch Campaign - Cinematic Storytelling in 4K">
+                <div class="portfolio-overlay">
+                    <h3>Luxury Watch Campaign</h3>
+                    <a href="work.html">our rolling Projects</a>
+                    <p>Cinematic Storytelling • 4K Production</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Tech Product Launch - Digital Campaign for Social Media">
+                <div class="portfolio-overlay">
+                    <h3>Tech Product Launch</h3>
+                    <p>Digital Campaign • Social Media</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Fashion Editorial - Photography and Brand Identity">
+                <div class="portfolio-overlay">
+                    <h3>Fashion Editorial</h3>
+                    <p>Photography • Brand Identity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Creative Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎬</div>
+                <h3>Digital Media</h3>
+                <a href="services/digital_media.html">Digital Media</a>
+                <p>Captivating content that engages audiences across all digital platforms with measurable impact.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Branding</h3>
+                <a href="services/branding.html">Branding</a>
+                <p>Distinct visual identities that resonate deeply with your target market and inspire recognition.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3>Marketing</h3>
+                <a href="services/marketing.html">Marketing</a>
+                <p>Data-driven strategies that deliver real business growth and audience engagement.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>Advertising</h3>
+                <a href="services/advertising.html">Advertising</a>
+                <p>Breakthrough creative campaigns that cut through the noise and deliver exceptional results.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎥</div>
+                <h3>Videography</h3>
+                <a href="services/videography.html">Videography</a>
+                <p>Cinematic storytelling optimized for digital consumption and maximum engagement.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎞️</div>
+                <h3>Cinematography</h3>
+                <a href="services/cinematography.html">Cinematography</a>
+                <p>Artistic visual narratives crafted with precision to elevate your brand's story.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ABOUT SECTION -->
+    <section class="services" id="about">
+        <h2 class="section-title">Our Story</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Who We Are</h3>
+                <p>Founded in 2025, The Rolling Plate Creatives began as a small team of passionate visual storytellers. Today, we've grown into a full-service creative agency with a reputation for delivering exceptional results.</p>
+            </div>
+            <div class="service-card">
+                <h3>Our Approach</h3>
+                <p>We believe in the power of visual storytelling to transform brands. Our process combines artistic vision with strategic thinking to create work that not only looks beautiful but drives real business results.</p>
+            </div>
+            <div class="service-card">
+                <h3>Our Team</h3>
+                <p>A diverse collective of directors, photographers, designers, and strategists united by a shared passion for creative excellence and innovative problem-solving.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section dark" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Roll Together</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Type</label>
+                        <select id="project" class="form-control">
+                            <option value="">Select an option</option>
+                            <option value="photography">Photography</option>
+                            <option value="videography">Videography</option>
+                            <option value="branding">Branding</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Project</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>The Rolling Plate Creatives</h3>
+                <p>Transforming ideas into unforgettable visual experiences through innovative storytelling and creative solutions.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><span>📸</span></a>
+                    <a href="#" aria-label="Facebook"><span>👍</span></a>
+                    <a href="#" aria-label="Twitter"><span>🐦</span></a>
+                    <a href="#" aria-label="LinkedIn"><span>💼</span></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="mailto:hello@rollingplate.com">hello@rollingplate.com</a>
+                <a href="tel:+11234567890">+1 (123) 456-7890</a>
+                <p>123 Creative Lane<br>Studio City, CA 91604</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="work.html">Our Work</a>
+                <a href="#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 The Rolling Plate Creatives. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCHBANG-STYLE FINAL REVEAL -->
+    <section class="final-reveal">
+        <h1 class="company-name">THE ROLLING PLATE CREATIVES</h1>
+    </section>
+
+    <script src="js/main.js" defer></script>
+
+    <script>
+        // ===== LOADING OVERLAY =====
+        const loadingOverlay = document.querySelector('.loading-overlay');
+        
+        // Hide loading overlay when everything is loaded
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                gsap.to(loadingOverlay, {
+                    opacity: 0,
+                    duration: 0.5,
+                    onComplete: () => {
+                        loadingOverlay.style.display = 'none';
+                    }
+                });
+            }, 1000);
+        });
+
+        // ===== 3D PLATE SHOWCASE =====
+        const plateShowcase = document.getElementById('plateShowcase');
+        let scene, camera, renderer, plates = [], rings = [];
+
+        function initPlateShowcase() {
+            // Check if WebGL is supported
+            if (!Detector.webgl) {
+                plateShowcase.style.display = 'none';
+                return;
+            }
+
+            // Scene setup
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 5;
+
+            renderer = new THREE.WebGLRenderer({ 
+                alpha: true,
+                antialias: true 
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
+            plateShowcase.appendChild(renderer.domElement);
+
+            // Create multiple rolling plates with enhanced details
+            for (let i = 0; i < 12; i++) {
+                // Create plate with more geometry detail
+                const plateGeometry = new THREE.TorusGeometry(
+                    0.4 + Math.random() * 0.6, // radius
+                    0.06 + Math.random() * 0.08, // tube radius
+                    32, // radial segments
+                    100 // tubular segments
+                );
+                
+                const plateMaterial = new THREE.MeshBasicMaterial({ 
+                    color: 0xE31937,
+                    wireframe: true,
+                    transparent: true,
+                    opacity: 0.25,
+                    wireframeLinewidth: 2
+                });
+                
+                const plate = new THREE.Mesh(plateGeometry, plateMaterial);
+                
+                // Random position with more spread
+                plate.position.x = (Math.random() - 0.5) * 15;
+                plate.position.y = (Math.random() - 0.5) * 15;
+                plate.position.z = (Math.random() - 0.5) * 10;
+                
+                // Random rotation
+                plate.rotation.x = Math.random() * Math.PI;
+                plate.rotation.y = Math.random() * Math.PI;
+                
+                scene.add(plate);
+                plates.push(plate);
+
+                // Create decorative rings around plates
+                const ringGeometry = new THREE.TorusGeometry(
+                    0.7 + Math.random() * 0.5,
+                    0.02,
+                    32,
+                    100
+                );
+                
+                const ringMaterial = new THREE.MeshBasicMaterial({ 
+                    color: 0x000000,
+                    wireframe: true,
+                    transparent: true,
+                    opacity: 0.15
+                });
+                
+                const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+                ring.position.copy(plate.position);
+                scene.add(ring);
+                rings.push(ring);
+            }
+
+            // Add some floating particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particleCount = 200;
+            
+            const posArray = new Float32Array(particleCount * 3);
+            for(let i = 0; i < particleCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 20;
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.02,
+                color: 0xE31937,
+                transparent: true,
+                opacity: 0.5
+            });
+            
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+
+            // Enhanced animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                plates.forEach((plate, i) => {
+                    // Smooth rotation
+                    plate.rotation.x += 0.003;
+                    plate.rotation.y += 0.005;
+                    plate.rotation.z += 0.001;
+                    
+                    // Organic floating movement
+                    plate.position.y += Math.sin(Date.now() * 0.001 + i * 10) * 0.002;
+                    plate.position.x += Math.cos(Date.now() * 0.001 + i * 5) * 0.001;
+                    
+                    // Match ring positions with slight variation
+                    rings[i].position.copy(plate.position);
+                    rings[i].position.y += Math.sin(Date.now() * 0.001 + i * 7) * 0.1;
+                    rings[i].rotation.x = plate.rotation.x * 0.8;
+                    rings[i].rotation.y = plate.rotation.y * 0.8;
+                });
+                
+                // Rotate particles for more dynamism
+                particlesMesh.rotation.x += 0.0005;
+                particlesMesh.rotation.y += 0.0005;
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+            
+            // Enhanced window resize handler
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        }
+
+        // ===== CUSTOM CURSOR =====
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorTrail = document.querySelector('.cursor-trail');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            // Smoother trail with easing
+            gsap.to(cursorTrail, {
+                left: e.clientX,
+                top: e.clientY,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+
+        // Enhanced cursor hover effects
+        document.querySelectorAll('button, .service-card, .portfolio-item, .nav-item, a').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.width = '50px';
+                cursor.style.height = '50px';
+                cursor.style.opacity = '0.7';
+                
+                // Pulse effect
+                gsap.to(cursor, {
+                    scale: 1.2,
+                    duration: 0.3,
+                    yoyo: true,
+                    repeat: 1
+                });
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                cursor.style.width = '20px';
+                cursor.style.height = '20px';
+                cursor.style.opacity = '1';
+            });
+        });
+
+        // ===== TEXT ANIMATIONS =====
+        // Animate the "rolling" text in hero
+        const rollingText = document.querySelector('.rolling-text');
+        const words = ['ROLL', 'INSPIRE', 'CAPTIVATE', 'INNOVATE'];
+        let currentWord = 0;
+
+        function rotateWord() {
+            const newWord = words[(currentWord + 1) % words.length];
+            const tempElement = document.createElement('span');
+            tempElement.textContent = newWord;
+            tempElement.style.position = 'absolute';
+            tempElement.style.opacity = '0';
+            rollingText.parentNode.appendChild(tempElement);
+            
+            gsap.to(rollingText, {
+                opacity: 0,
+                y: 20,
+                duration: 0.3,
+                onComplete: () => {
+                    rollingText.textContent = newWord;
+                    tempElement.remove();
+                    currentWord = (currentWord + 1) % words.length;
+                    
+                    gsap.fromTo(rollingText, 
+                        { opacity: 0, y: -20 },
+                        { opacity: 1, y: 0, duration: 0.3 }
+                    );
+                }
+            });
+        }
+
+        // Start word rotation every 2 seconds
+        setInterval(rotateWord, 2000);
+
+        // ===== SCROLL ANIMATIONS =====
+        // Initialize GSAP scroll animations
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+        
+        // Animate elements on scroll
+        gsap.utils.toArray('.service-card, .portfolio-item, .footer-column').forEach((el, i) => {
+            gsap.from(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                delay: i * 0.1
+            });
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        gsap.to(window, {
+                            duration: 1,
+                            scrollTo: targetElement,
+                            ease: "power2.inOut"
+                        });
+                    }
+                }
+            });
+        });
+
+        // Header scroll effect
+        const mainHeader = document.querySelector('.main-header');
+        const cinematicNav = document.querySelector('.cinematic-nav');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                mainHeader.classList.add('scrolled');
+                cinematicNav.classList.add('scrolled');
+            } else {
+                mainHeader.classList.remove('scrolled');
+                cinematicNav.classList.remove('scrolled');
+            }
+        });
+
+        // Schbang-style name reveal animation
+        gsap.to(".company-name", {
+            scrollTrigger: {
+                trigger: ".final-reveal",
+                start: "top center",
+                toggleActions: "play none none none",
+                scrub: 1
+            },
+            opacity: 1,
+            scale: 1,
+            ease: "power3.out",
+            duration: 1.5
+        });
+
+        // Hero animations on load
+        gsap.from('.hero h2', {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.3
+        });
+        
+        gsap.from('.hero p', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            delay: 0.6
+        });
+        
+        gsap.from('.cta-button', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            delay: 0.9
+        });
+
+        // Initialize everything
+        window.addEventListener('load', () => {
+            try {
+                initPlateShowcase();
+            } catch (error) {
+                console.error("Error initializing 3D scene:", error);
+                plateShowcase.style.display = 'none';
+            }
+        });
+
+        // WebGL detection
+        const Detector = {
+            webgl: (function() {
+                try {
+                    const canvas = document.createElement('canvas');
+                    return !!(
+                        window.WebGLRenderingContext && 
+                        (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
+                    );
+                } catch (e) {
+                    return false;
+                }
+            })()
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Media Services | The Rolling Plate Creatives</title>
+    <meta name="description" content="Professional digital media services including social media content, photography, and video production for brands.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, rgba(227,25,55,0.1) 0%, rgba(255,255,255,1) 100%);
+        }
+        .service-feature-card {
+            border-left: 4px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- LOADING OVERLAY -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- 3D PLATE SHOWCASE -->
+    <div class="plate-showcase" id="plateShowcase"></div>
+
+    <!-- FLOATING ACCENT GRAPHICS -->
+    <div class="floating-accent" style="width: 400px; height: 400px; background: var(--primary); top: 20%; left: 10%; animation: float 8s ease-in-out infinite;"></div>
+    <div class="floating-accent" style="width: 500px; height: 500px; background: var(--accent-blue); top: 60%; left: 70%; animation: float 10s ease-in-out infinite reverse;"></div>
+
+    <!-- MAIN HEADER WITH LOGO -->
+    <header class="main-header">
+        <img src="https://therollingplatecreatives.com/wp-content/uploads/2022/08/cropped-TRP-LOGO-1.png" alt="The Rolling Plate Creatives Logo">
+        <h1>The Rolling Plate Creatives</h1>
+    </header>
+
+    <!-- CINEMATIC NAVIGATION -->
+    <nav class="cinematic-nav">
+        <a href="../index.html" class="nav-item">Home</a>
+        <a href="../work.html" class="nav-item">Work</a>
+        <a href="../services/digital-media.html" class="nav-item active">Services</a>
+        <a href="../about.html" class="nav-item">About</a>
+        <a href="../contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- SERVICE HERO SECTION -->
+    <section class="hero service-hero">
+        <h2>Digital Media <span class="rolling-text">Solutions</span></h2>
+        <p>Captivating content that engages audiences across all digital platforms with measurable impact.</p>
+        <button class="cta-button">Get Your Free Consultation</button>
+    </section>
+
+    <!-- SERVICE DETAILS -->
+    <section class="services">
+        <div class="container">
+            <div class="service-intro">
+                <h3>Transform Your Digital Presence</h3>
+                <p>In today's digital landscape, content is king. Our digital media services are designed to help your brand stand out in the crowded online space. We create visually stunning content optimized for each platform's unique requirements.</p>
+            </div>
+
+            <div class="service-features">
+                <div class="service-feature-card">
+                    <div class="service-icon">📱</div>
+                    <h4>Social Media Content</h4>
+                    <p>Platform-specific content that drives engagement and grows your following. From Instagram Reels to LinkedIn articles, we craft content that performs.</p>
+                </div>
+                
+                <div class="service-feature-card">
+                    <div class="service-icon">📸</div>
+                    <h4>Photography</h4>
+                    <p>High-quality images that showcase your products, services, and brand personality. Perfect for e-commerce, websites, and marketing materials.</p>
+                </div>
+                
+                <div class="service-feature-card">
+                    <div class="service-icon">🎥</div>
+                    <h4>Video Production</h4>
+                    <p>Short-form and long-form video content optimized for digital consumption. From TikTok videos to YouTube documentaries, we've got you covered.</p>
+                </div>
+            </div>
+
+            <div class="service-process">
+                <h3>Our Digital Media Process</h3>
+                <ol class="process-steps">
+                    <li>
+                        <h4>Discovery</h4>
+                        <p>We learn about your brand, audience, and goals</p>
+                    </li>
+                    <li>
+                        <h4>Strategy</h4>
+                        <p>We develop a content plan tailored to your needs</p>
+                    </li>
+                    <li>
+                        <h4>Production</h4>
+                        <p>Our team creates stunning visual content</p>
+                    </li>
+                    <li>
+                        <h4>Distribution</h4>
+                        <p>We help share your content where it matters most</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SHOWCASE -->
+    <section class="portfolio">
+        <h2 class="section-title">Digital Media Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Social Media Campaign">
+                <div class="portfolio-overlay">
+                    <h3>Fashion Brand Instagram</h3>
+                    <p>30% increase in engagement</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Product Photography">
+                <div class="portfolio-overlay">
+                    <h3>E-commerce Product Shots</h3>
+                    <p>Increased conversion by 22%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Elevate Your Digital Presence?</h3>
+            <p>Let's create content that makes your brand stand out.</p>
+            <a href="../contact.html" class="cta-button">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>The Rolling Plate Creatives</h3>
+                <p>Transforming ideas into unforgettable visual experiences through innovative storytelling and creative solutions.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><span>📸</span></a>
+                    <a href="#" aria-label="Facebook"><span>👍</span></a>
+                    <a href="#" aria-label="Twitter"><span>🐦</span></a>
+                    <a href="#" aria-label="LinkedIn"><span>💼</span></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="mailto:hello@rollingplate.com">hello@rollingplate.com</a>
+                <a href="tel:+11234567890">+1 (123) 456-7890</a>
+                <p>123 Creative Lane<br>Studio City, CA 91604</p>
+            </div>
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <a href="digital-media.html">Digital Media</a>
+                <a href="branding.html">Branding</a>
+                <a href="marketing.html">Marketing</a>
+                <a href="advertising.html">Advertising</a>
+                <a href="videography.html">Videography</a>
+                <a href="cinematography.html">Cinematography</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 The Rolling Plate Creatives. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Service-specific animations
+        gsap.from(".service-feature-card", {
+            scrollTrigger: {
+                trigger: ".service-features",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.2
+        });
+    </script>
+</body>
+</html>

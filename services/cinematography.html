@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematography Services | The Rolling Plate Creatives</title>
+    <meta name="description" content="Artistic visual narratives crafted with precision to elevate your brand's story.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --accent: #e50914;
+            --gold: #ffb600;
+            --text: #ffffff;
+            --text-secondary: #cccccc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(10, 10, 10, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 30px;
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .hero h2 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .rolling-text {
+            color: var(--gold);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .rolling-text:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            animation: underlinePulse 3s infinite;
+        }
+        
+        @keyframes underlinePulse {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--accent), #ff3c2d);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(229, 9, 20, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(229, 9, 20, 0.4);
+        }
+        
+        /* Film Strip Showcase */
+        .film-strip-section {
+            padding: 100px 0;
+            background-color: var(--secondary);
+            position: relative;
+        }
+        
+        .film-strip-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L100,0 L100,5 L0,5 L0,10 L100,10 L100,15 L0,15 Z' fill='%230a0a0a'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+        }
+        
+        .film-strip-section:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L100,0 L100,5 L0,5 L0,10 L100,10 L100,15 L0,15 Z' fill='%230a0a0a'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+            transform: rotate(180deg);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .film-strip {
+            display: flex;
+            overflow-x: auto;
+            padding: 40px 20px;
+            gap: 15px;
+            margin-bottom: 60px;
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        .film-strip::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .film-frame {
+            min-width: 300px;
+            height: 200px;
+            border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .film-frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .film-frame:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .film-frame:hover:before {
+            opacity: 1;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--primary);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .service-card {
+            background-color: var(--secondary);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        
+        .service-description {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            position: relative;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            background-color: rgba(26, 26, 26, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--gold);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-film"></i>
+                The Rolling Plate
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CINEMATIC HERO -->
+    <section class="hero">
+        <h2>Cinematography <span class="rolling-text">Mastery</span></h2>
+        <p>Artistic visual narratives crafted with precision to elevate your brand's story.</p>
+        <button class="cta-button">Start Your Project</button>
+    </section>
+
+    <!-- FILM STRIP SHOWCASE -->
+    <section class="film-strip-section">
+        <div class="container">
+            <h3 class="section-title">Our Visual Portfolio</h3>
+            <p class="section-subtitle">Each frame tells a story. Explore our collection of cinematic moments that have captivated audiences and transformed brands.</p>
+            
+            <div class="film-strip">
+                <div class="film-frame" style="background-image: url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1560&q=80')"></div>
+                <div class="film-frame" style="background-image: url('https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1621&q=80')"></div>
+                <div class="film-frame" style="background-image: url('https://images.unsplash.com/photo-1518665750801-44c1c604de4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')"></div>
+                <div class="film-frame" style="background-image: url('https://images.unsplash.com/photo-1547996160-81dfc10be2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1540&q=80')"></div>
+                <div class="film-frame" style="background-image: url('https://images.unsplash.com/photo-155345805-43d2a1d5c518?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')"></div>
+                <div class="film-frame" style="background-image: url('https://images.unsplash.com/photo-1552422535-c45813c61732?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services">
+        <div class="container">
+            <h3 class="section-title">Our Cinematic Services</h3>
+            <p class="section-subtitle">We offer a comprehensive range of cinematography services to bring your vision to life, from concept development to final delivery.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h4 class="service-title">Commercial Cinematography</h4>
+                    <p class="service-description">Elevate your brand with compelling commercial videos that tell your story and connect with your audience.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h4 class="service-title">Narrative Films</h4>
+                    <p class="service-description">Bring your stories to life with our narrative filmmaking expertise, from short films to feature productions.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h4 class="service-title">Music Videos</h4>
+                    <p class="service-description">Create visually stunning music videos that complement your sound and enhance your artistic expression.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <h3 class="section-title">Client Testimonials</h3>
+            <p class="section-subtitle">Hear what our clients have to say about working with The Rolling Plate Creatives.</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p class="testimonial-text">"The Rolling Plate transformed our brand story into a cinematic masterpiece. Their attention to detail and creative vision exceeded all our expectations."</p>
+                    <p class="testimonial-author">- Sarah Johnson, Marketing Director at Luminary Brands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h3 class="section-title">Ready to Create Something Amazing?</h3>
+            <p class="section-subtitle">Let's collaborate to bring your vision to life with our cinematic expertise and creative storytelling.</p>
+            <button class="cta-button">Get in Touch</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>The Rolling Plate</h3>
+                    <p>Creating visual narratives that captivate audiences and elevate brands through the art of cinematography.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <a href="#">Commercial Cinematography</a>
+                    <a href="#">Narrative Films</a>
+                    <a href="#">Music Videos</a>
+                    <a href="#">Documentaries</a>
+                    <a href="#">Brand Stories</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Film Avenue, Studio City, CA 91604</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@rollingplatecreatives.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 The Rolling Plate Creatives. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for film strip scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            const filmStrip = document.querySelector('.film-strip');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            filmStrip.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - filmStrip.offsetLeft;
+                scrollLeft = filmStrip.scrollLeft;
+            });
+            
+            filmStrip.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+            
+            filmStrip.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+            
+            filmStrip.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - filmStrip.offsetLeft;
+                const walk = (x - startX) * 2;
+                filmStrip.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
+</body>
+</html>
